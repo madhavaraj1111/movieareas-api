@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  MovieDetail,
   MoviesCreate,
   MoviesDelete,
   MoviesRead,
@@ -10,6 +11,9 @@ const router = express.Router();
 
 // Read
 router.get("/", MoviesRead);
+
+// Read Movie
+router.get("/:id", MovieDetail);
 
 // Creation
 router.post("/", MoviesCreate);

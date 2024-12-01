@@ -8,6 +8,8 @@ const PORT = 6969;
 // database connection
 connectDb();
 
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
